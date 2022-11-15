@@ -10,7 +10,14 @@ function App() {
     <div>
       <Header />
       <main className={styles.main}>
-        <h1>Conteudo</h1>
+        <div>
+          <h2>O que voce vai fazer?</h2>
+          <Form btnText="Criar tarefa" />
+        </div>
+        <div>
+          <h2>Suas tarefas</h2>
+          <List a="aaa" />
+        </div>
       </main>
       <Footer />
     </div>
