@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-alert */
 /* eslint-disable no-shadow */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -20,25 +23,19 @@ const Form: React.FC<FormProps> = ({ btnText, taskList, setTaskList }) => {
   const addTaskHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    const id = Math.floor(Math.random() * 1000)
-    const newTask: ITask = { id, titulo, descricao }
-
-    setTaskList!([...taskList, newTask])
-
-    setTitulo('')
-    setDescricao('')
-
-    console.log(taskList)
+    handleChange()
   }
 
   const handleChange = () => {
     if (titulo === '' || descricao === '') {
       alert('Preencha todos os campos')
     } else {
-      const novoRecado: RecadoRequest = {
-        titulo,
-        descricao,
-      }
+      const id = Math.floor(Math.random() * 1000)
+      const newTask: ITask = { id, titulo, descricao }
+
+      setTaskList!([...taskList, newTask])
+      setTitulo('')
+      setDescricao('')
     }
   }
 
