@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable no-alert */
 /* eslint-disable no-shadow */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -27,8 +29,6 @@ const Form: React.FC<FormProps> = ({ btnText, taskList, setTaskList }) => {
 
     setTitulo('')
     setDescricao('')
-
-    console.log(taskList)
   }
 
   const handleChange = () => {
