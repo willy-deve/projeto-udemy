@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 /* eslint-disable no-shadow */
 /* eslint-disable react/no-children-prop */
+=======
+/* eslint-disable react/no-children-prop */
+/* eslint-disable eqeqeq */
+>>>>>>> af569e47a97319753e3acaed2b5a392487603d91
 import React, { useState } from 'react'
 import Footer from './componentes/Footer/Footer'
 import Header from './componentes/Header/Header'
@@ -15,6 +20,7 @@ function App() {
   const deleteTask = (id: number) => {
     setTaskList(
       taskList.filter((task) => {
+<<<<<<< HEAD
         return task.id !== id
       })
     )
@@ -32,11 +38,21 @@ function App() {
 
   const editTask = (): void => {
     hiderOrShowModal(true)
+=======
+        return task.id! === id
+      })
+    )
+    console.log('cliclou delete')
+>>>>>>> af569e47a97319753e3acaed2b5a392487603d91
   }
 
   return (
     <div>
+<<<<<<< HEAD
       <Modal children={<Form btnText="Editar" taskList={taskList} />} />
+=======
+      <Modal children={<Form btnText="Editar Tarefa" taskList={taskList} />} />
+>>>>>>> af569e47a97319753e3acaed2b5a392487603d91
       <Header />
       <main className={styles.main}>
         <div>
@@ -49,11 +65,15 @@ function App() {
         </div>
         <div>
           <h2>Suas tarefas</h2>
+<<<<<<< HEAD
           <List
             taskList={taskList}
             handleDelete={deleteTask}
             handleEdit={editTask}
           />
+=======
+          <List taskList={taskList} handleDelete={deleteTask} />
+>>>>>>> af569e47a97319753e3acaed2b5a392487603d91
         </div>
       </main>
       <Footer />

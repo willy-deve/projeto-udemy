@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -21,6 +22,20 @@ const Modal: React.FC<Props> = ({ children }) => {
     <div id="modal" className="hide">
       <div className={styles.fade} onClick={closeModal} />
       <div className={styles.modal}>
+=======
+import React from 'react'
+import style from './Modal.module.css'
+
+interface ComponetNameProps {
+  children: React.ReactNode
+}
+
+const Modal: React.FC<ComponetNameProps> = ({ children }) => {
+  return (
+    <div id="modal">
+      <div className={style.fade} />
+      <div className={style.modal}>
+>>>>>>> af569e47a97319753e3acaed2b5a392487603d91
         <h2>Texto modal</h2>
         {children}
       </div>
